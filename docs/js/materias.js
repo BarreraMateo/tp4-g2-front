@@ -123,15 +123,16 @@ async function modificarMateria() {
     console.log("Status:", response.status, response.statusText)
 
     const data = await response.json()
+    const materiaModificada = data.materia
     console.log("Respuesta del back:", data)
 
     if (data.materia) {
       cardContainer4.innerHTML = `
         <p style="color:green;">${data.msg}</p>
         <div class="card">
-          <p>"ID MATERIA": ${data.materia.idMateria}</p>
-          <p>"NOMBRE": ${data.materia.nombre}</p>
-          <p>"CUATRIMESTRE": ${data.materia.cuatrimestre}</p>
+          <p>"ID MATERIA": ${data.materiaModificada.idMateria}</p>
+          <p>"NOMBRE": ${data.materiaModificada.nombre}</p>
+          <p>"CUATRIMESTRE": ${data.materiaModificada.cuatrimestre}</p>
         </div>
       `
     } else {
