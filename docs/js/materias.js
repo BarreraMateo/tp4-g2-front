@@ -124,9 +124,9 @@ async function modificarMateria() {
 
     cardContainer4.innerHTML = `
       <div class="card">
-        <p>"ID MATERIA": ${data.idMateria}</p>
-        <p>"NOMBRE": ${data.nombre}</p>
-        <p>"CUATRIMESTRE": ${data.cuatrimestre}</p>
+        <p>"ID MATERIA": ${data.materia.idMateria}</p>
+        <p>"NOMBRE": ${data.materia.nombre}</p>
+        <p>"CUATRIMESTRE": ${data.materia.cuatrimestre}</p>
       </div>
     `
   } catch (error) {
