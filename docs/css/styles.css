@@ -1,4 +1,4 @@
-/* Reset básico */
+
 body {
   font-family: Arial, sans-serif;
   margin: 20px;
@@ -6,15 +6,21 @@ body {
   color: #333;
 }
 
+/* Contenedor de navegación */
+.navbar {
+  text-align: center;   
+  margin-bottom: 20px;  
+}
+
 /* Navegación */
-a {
-  margin-right: 15px;
+.navbar a {
+  margin: 0 15px;
   text-decoration: none;
   color: #0077cc;
   font-weight: bold;
 }
 
-a:hover {
+.navbar a:hover {
   color: #005fa3;
   text-decoration: underline;
 }
@@ -62,7 +68,8 @@ div {
   border: 1px solid #ddd;
   border-radius: 6px;
   padding: 12px;
-  margin: 8px 0;
+  margin: 8px auto;   
+  max-width: 400px;   
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
