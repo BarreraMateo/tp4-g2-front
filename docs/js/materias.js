@@ -102,34 +102,42 @@ async function modificarMateria() {
   try {
     const idMateria = inputIdMateriaM.value.trim()
 
-    const materia = {}
-      materia.idMateria = idMateria
-    if (inputNombreM.value) {
-      materia.nombre = inputNombreM.value
+    const materia = { idMateria }
+
+    if (inputNombreM.value.trim() !== "") {
+      materia.nombre = inputNombreM.value.trim()
     }
 
-    if (inputCuatrimestreM.value) {
-      materia.cuatrimestre = inputCuatrimestreM.value
+    if (inputCuatrimestreM.value.trim() !== "") {
+      materia.cuatrimestre = inputCuatrimestreM.value.trim()
     }
+
+    console.log("Body enviado:", materia)
 
     const response = await fetch(`${URL}/${idMateria}`, {
       method: 'PUT',
-      headers: {
-        'Content-Type': 'application/json'
-      },
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(materia)
     })
 
-    const data = await response.json()
-    const materiaActualizada = data.materia
+    console.log("Status:", response.status, response.statusText)
 
-    cardContainer4.innerHTML = `
-      <div class="card">
-        <p>"ID MATERIA": ${data.materiaActualizada.idMateria}</p>
-        <p>"NOMBRE": ${data.materiaActualizada.nombre}</p>
-        <p>"CUATRIMESTRE": ${data.materiaActualizada.cuatrimestre}</p>
-      </div>
-    `
+    const data = await response.json()
+    console.log("Respuesta del back:", data)
+
+    if (data.materia) {
+      cardContainer4.innerHTML = `
+        <p style="color:green;">${data.msg}</p>
+        <div class="card">
+          <p>"ID MATERIA": ${data.materia.idMateria}</p>
+          <p>"NOMBRE": ${data.materia.nombre}</p>
+          <p>"CUATRIMESTRE": ${data.materia.cuatrimestre}</p>
+          <p>"MODIFICACION": ${data.materia.modificacion}</p>
+        </div>
+      `
+    } else {
+      cardContainer4.innerHTML = `<p style="color:red;">${data.msg || "Error al modificar la materia"}</p>`
+    }
   } catch (error) {
     console.log(error)
   }
