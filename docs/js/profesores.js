@@ -149,14 +149,14 @@ async function modificarProfesor() {
 
     cardContainer4.innerHTML = `
       <div class="card">
-        <div class="card-legajo"><p>"LEGAJO": ${data.legajo}</p></div>
-        <div class="card-nombre"><p>"NOMBRE": ${data.nombre}</p></div>
-        <div class="card-apellido"><p>"APELLIDO": ${data.apellido}</p></div>
-        <div class="card-email"><p>"EMAIL": ${data.email}</p></div>
-        <div class="card-especialidad"><p>"ESPECIALIDAD": ${data.especialidad}</p></div>
-        <div class="card-fechaAlta"><p>"FECHA ALTA": ${data.fechaAlta}</p></div>
-        <div class="card-modificacion"><p>"MODIFICACION": ${data.modificacion}</p></div>
-        <div class="card-isActive"><p>"IS ACTIVE": ${data.isActive}</p></div>
+        <div class="card-legajo"><p>"LEGAJO": ${data.profesorModificado.legajo}</p></div>
+        <div class="card-nombre"><p>"NOMBRE": ${data.profesorModificado.nombre}</p></div>
+        <div class="card-apellido"><p>"APELLIDO": ${data.profesorModificado.apellido}</p></div>
+        <div class="card-email"><p>"EMAIL": ${data.profesorModificado.email}</p></div>
+        <div class="card-especialidad"><p>"ESPECIALIDAD": ${data.profesorModificado.especialidad}</p></div>
+        <div class="card-fechaAlta"><p>"FECHA ALTA": ${data.profesorModificado.fechaAlta}</p></div>
+        <div class="card-modificacion"><p>"MODIFICACION": ${data.profesorModificado.modificacion}</p></div>
+        <div class="card-isActive"><p>"IS ACTIVE": ${data.profesorModificado.isActive}</p></div>
       </div>
     `
   } catch (error) {
@@ -178,14 +178,14 @@ async function eliminarProfesor() {
       <p style="color:green;">${data.msg}</p>
 
       <div class="card">
-        <div class="card-legajo"><p>"LEGAJO": ${data.legajo}</p></div>
-        <div class="card-nombre"><p>"NOMBRE": ${data.nombre}</p></div>
-        <div class="card-apellido"><p>"APELLIDO": ${data.apellido}</p></div>
-        <div class="card-email"><p>"EMAIL": ${data.email}</p></div>
-        <div class="card-especialidad"><p>"ESPECIALIDAD": ${data.especialidad}</p></div>
-        <div class="card-fechaAlta"><p>"FECHA ALTA": ${data.fechaAlta}</p></div>
-        <div class="card-modificacion"><p>"MODIFICACION": ${data.modificacion}</p></div>
-        <div class="card-isActive"><p>"IS ACTIVE": ${data.isActive}</p></div>
+        <div class="card-legajo"><p>"LEGAJO": ${data.profesor.legajo}</p></div>
+        <div class="card-nombre"><p>"NOMBRE": ${data.profesor.nombre}</p></div>
+        <div class="card-apellido"><p>"APELLIDO": ${data.profesor.apellido}</p></div>
+        <div class="card-email"><p>"EMAIL": ${data.profesor.email}</p></div>
+        <div class="card-especialidad"><p>"ESPECIALIDAD": ${data.profesor.especialidad}</p></div>
+        <div class="card-fechaAlta"><p>"FECHA ALTA": ${data.profesor.fechaAlta}</p></div>
+        <div class="card-modificacion"><p>"MODIFICACION": ${data.profesor.modificacion}</p></div>
+        <div class="card-isActive"><p>"IS ACTIVE": ${data.profesor.isActive}</p></div>
       </div>
     `
   } catch (error) {
