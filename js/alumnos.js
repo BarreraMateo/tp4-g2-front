@@ -21,7 +21,7 @@ const inputLegajoE = document.querySelector('#input-legajoE')
 
 async function cargarTodosAlumnos() {
   try {
-    const response = await fetch('http://localhost:3000/alumnos')
+    const response = await fetch('https://tp4-nodejs-g2.onrender.com/alumnos')
     const data = await response.json()
     console.log(response)
     console.log(data)
@@ -58,7 +58,7 @@ async function cargarAlumnoPorLegajo() {
       return
     }
 
-    const response = await fetch(`http://localhost:3000/alumnos/${legajo}`)
+    const response = await fetch(`https://tp4-nodejs-g2.onrender.com/alumnos/${legajo}`)
     if (!response.ok) {
       throw new Error(`Alumno con legajo ${legajo} no encontrado`)
     }
@@ -96,7 +96,7 @@ async function agregarAlumno() {
 
     const nuevoAlumno = { nombre, apellido, email }
 
-    const response = await fetch('http://localhost:3000/alumnos', {
+    const response = await fetch('https://tp4-nodejs-g2.onrender.com/alumnos', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -147,7 +147,7 @@ async function modificarAlumno() {
     if (email) alumnoModificado.email = email
     if (isActive) alumnoModificado.isActive = (isActive.toLowerCase() === "true")
 
-    const response = await fetch(`http://localhost:3000/alumnos/${legajo}`, {
+    const response = await fetch(`https://tp4-nodejs-g2.onrender.com/alumnos/${legajo}`, {
       method: 'PUT',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(alumnoModificado)
@@ -185,7 +185,7 @@ async function eliminarAlumnoPorLegajo() {
       return
     }
 
-    const response = await fetch(`http://localhost:3000/alumnos/${legajo}`, {
+    const response = await fetch(`https://tp4-nodejs-g2.onrender.com/alumnos/${legajo}`, {
       method: 'DELETE'
     })
 
