@@ -123,20 +123,49 @@ async function modificarMateria() {
     console.log("Status:", response.status, response.statusText)
 
     const data = await response.json()
-    const materiaModificada = data.materia
     console.log("Respuesta del back:", data)
 
     if (data.materia) {
+      const materiaModificada = data.materia
       cardContainer4.innerHTML = `
         <p style="color:green;">${data.msg}</p>
         <div class="card">
-          <p>"ID MATERIA": ${data.materiaModificada.idMateria}</p>
-          <p>"NOMBRE": ${data.materiaModificada.nombre}</p>
-          <p>"CUATRIMESTRE": ${data.materiaModificada.cuatrimestre}</p>
+          <p>"ID MATERIA": ${materiaModificada.idMateria}</p>
+          <p>"NOMBRE": ${materiaModificada.nombre}</p>
+          <p>"CUATRIMESTRE": ${materiaModificada.cuatrimestre}</p>
         </div>
       `
     } else {
       cardContainer4.innerHTML = `<p style="color:red;">${data.msg || "Error al modificar la materia"}</p>`
+    }
+  } catch (error) {
+    console.log(error)
+  }
+}
+
+async function eliminarMateria() {
+  try {
+    const idMateria = inputIdMateriaE.value.trim()
+
+    const response = await fetch(`${URL}/${idMateria}`, {
+      method: 'DELETE'
+    })
+
+    const data = await response.json()
+    console.log("Respuesta del back:", data)
+
+    if (data.materia) {
+      const materiaEliminada = data.materia
+      cardContainer5.innerHTML = `
+        <p style="color:green;">${data.msg}</p>
+        <div class="card">
+          <p>"ID MATERIA": ${materiaEliminada.idMateria}</p>
+          <p>"NOMBRE": ${materiaEliminada.nombre}</p>
+          <p>"CUATRIMESTRE": ${materiaEliminada.cuatrimestre}</p>
+        </div>
+      `
+    } else {
+      cardContainer5.innerHTML = `<p style="color:red;">${data.msg || "Error al eliminar la materia"}</p>`
     }
   } catch (error) {
     console.log(error)
