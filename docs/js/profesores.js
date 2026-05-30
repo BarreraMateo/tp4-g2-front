@@ -112,6 +112,9 @@ async function agregarProfesor() {
         <div class="card-apellido"><p>"APELLIDO": ${data.profesorNuevo.apellido}</p></div>
         <div class="card-email"><p>"EMAIL": ${data.profesorNuevo.email}</p></div>
         <div class="card-especialidad"><p>"ESPECIALIDAD": ${data.profesorNuevo.especialidad}</p></div>
+        <div class="card-fechaAlta"><p>"FECHA ALTA": ${data.profesorNuevo.fechaAlta}</p></div>
+        <div class="card-modificacion"><p>"MODIFICACION": ${data.profesorNuevo.modificacion}</p></div>
+        <div class="card-isActive"><p>"IS ACTIVE": ${data.profesorNuevo.isActive}</p></div>
       </div>
     `
   } catch (error) {
@@ -151,6 +154,9 @@ async function modificarProfesor() {
         <div class="card-apellido"><p>"APELLIDO": ${data.profesorModificado.apellido}</p></div>
         <div class="card-email"><p>"EMAIL": ${data.profesorModificado.email}</p></div>
         <div class="card-especialidad"><p>"ESPECIALIDAD": ${data.profesorModificado.especialidad}</p></div>
+        <div class="card-fechaAlta"><p>"FECHA ALTA": ${data.profesorNuevo.fechaAlta}</p></div>
+        <div class="card-modificacion"><p>"MODIFICACION": ${data.profesorNuevo.modificacion}</p></div>
+        <div class="card-isActive"><p>"IS ACTIVE": ${data.profesorNuevo.isActive}</p></div>
       </div>
     `
   } catch (error) {
@@ -177,6 +183,9 @@ async function eliminarProfesor() {
         <div class="card-apellido"><p>"APELLIDO": ${data.profesor.apellido}</p></div>
         <div class="card-email"><p>"EMAIL": ${data.profesor.email}</p></div>
         <div class="card-especialidad"><p>"ESPECIALIDAD": ${data.profesor.especialidad}</p></div>
+        <div class="card-fechaAlta"><p>"FECHA ALTA": ${data.profesorNuevo.fechaAlta}</p></div>
+        <div class="card-modificacion"><p>"MODIFICACION": ${data.profesorNuevo.modificacion}</p></div>
+        <div class="card-isActive"><p>"IS ACTIVE": ${data.profesorNuevo.isActive}</p></div>
       </div>
     `
   } catch (error) {
