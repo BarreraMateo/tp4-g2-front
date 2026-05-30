@@ -109,7 +109,7 @@ async function modificarMateria() {
     }
 
     if (inputCuatrimestreM.value) {
-      materia.cuatrimestre = Number(inputCuatrimestreM.value)
+      materia.cuatrimestre = inputCuatrimestreM.value
     }
 
     const response = await fetch(`${URL}/${idMateria}`, {
