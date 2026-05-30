@@ -88,9 +88,9 @@ async function agregarMateria() {
 
     cardContainer3.innerHTML = `
       <div class="card">
-        <p>"ID MATERIA": ${data.materiaNueva.idMateria}</p>
-        <p>"NOMBRE": ${data.materiaNueva.nombre}</p>
-        <p>"CUATRIMESTRE": ${data.materiaNueva.cuatrimestre}</p>
+        <p>"ID MATERIA": ${data.nuevaMateria.idMateria}</p>
+        <p>"NOMBRE": ${data.nuevaMateria.nombre}</p>
+        <p>"CUATRIMESTRE": ${data.nuevaMateria.cuatrimestre}</p>
       </div>
     `
   } catch (error) {
@@ -124,9 +124,9 @@ async function modificarMateria() {
 
     cardContainer4.innerHTML = `
       <div class="card">
-        <p>"ID MATERIA": ${data.materiaModificada.idMateria}</p>
-        <p>"NOMBRE": ${data.materiaModificada.nombre}</p>
-        <p>"CUATRIMESTRE": ${data.materiaModificada.cuatrimestre}</p>
+        <p>"ID MATERIA": ${data.idMateria}</p>
+        <p>"NOMBRE": ${data.nombre}</p>
+        <p>"CUATRIMESTRE": ${data.cuatrimestre}</p>
       </div>
     `
   } catch (error) {
