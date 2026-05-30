@@ -132,7 +132,6 @@ async function modificarMateria() {
           <p>"ID MATERIA": ${data.materia.idMateria}</p>
           <p>"NOMBRE": ${data.materia.nombre}</p>
           <p>"CUATRIMESTRE": ${data.materia.cuatrimestre}</p>
-          <p>"MODIFICACION": ${data.materia.modificacion}</p>
         </div>
       `
     } else {
