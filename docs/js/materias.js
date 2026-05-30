@@ -103,7 +103,7 @@ async function modificarMateria() {
     const idMateria = inputIdMateriaM.value.trim()
 
     const materia = {}
-
+      materia.idMateria = idMateria
     if (inputNombreM.value) {
       materia.nombre = inputNombreM.value
     }
