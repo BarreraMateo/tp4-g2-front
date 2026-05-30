@@ -1,0 +1,51 @@
+body {
+    background-color: #f4f6f9;
+}
+
+.navbar {
+    box-shadow: 0 2px 10px rgba(0,0,0,.2);
+}
+
+.card {
+    border: none;
+    border-radius: 10px;
+}
+
+.card-header {
+    font-weight: bold;
+}
+
+.table th {
+    background-color: #212529;
+    color: white;
+}
+
+.activo {
+    background-color: #198754;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.inactivo {
+    background-color: #dc3545;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.btn {
+    margin-right: 5px;
+}
+
+#buscador {
+    box-shadow: 0 2px 5px rgba(0,0,0,.1);
+}
+
+h2 {
+    color: #212529;
+}
+
+.table-responsive {
+    max-height: 600px;
+}
