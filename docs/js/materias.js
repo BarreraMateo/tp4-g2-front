@@ -121,7 +121,8 @@ async function modificarMateria() {
     })
 
     const data = await response.json()
-
+    console.log("Respuesta del back:", data)
+    
     cardContainer4.innerHTML = `
       <div class="card">
         <p>"ID MATERIA": ${data.materia.idMateria}</p>
